@@ -24,6 +24,24 @@ for (let i = 0; i < collectionOfButterflies.length; i++) {
     let colorAndRegionContainerTag = document.createElement('div');
     
     let colorTag = document.createElement('p');
+    // let colorDisplay = '';
+    // for (let j = 0; j < collectionOfButterflies[i].colors.length; j++) {
+    //     if (collectionOfButterflies[i].colors.length === 1) {
+    //         colorDisplay = collectionOfButterflies[i].colors[j];
+    //     }
+    //     else if (i < (collectionOfButterflies[i].colors.length - 1)  ) {
+    //         if (i !== 0) {
+    //             colorDisplay += collectionOfButterflies[i].colors[j] + ' - ';
+    //         }
+    //         else {
+    //             colorDisplay += collectionOfButterflies[i].colors[j] + ' - ';
+    //         }
+    //     }
+    //     else {
+    //         colorDisplay += collectionOfButterflies[i].colors[j];
+    //     }
+    // }
+    // let color = document.createTextNode(colorDisplay);
     let color = document.createTextNode(colorArr[i]);
     colorTag.appendChild(color);
 
