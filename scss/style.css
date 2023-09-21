@@ -406,8 +406,10 @@ body p {
   padding-bottom: 1rem;
 }
 .allCards article div:nth-of-type(2) h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 200;
+  color: #848a91;
+  font-weight: 400;
 }
 .allCards article p {
   padding-bottom: 40px;
