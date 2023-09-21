@@ -333,6 +333,16 @@ body p {
   line-height: 1.5;
 }
 
+@media only screen and (min-width: 1200px) {
+  body > div {
+    width: 80%;
+    margin: 0 auto;
+  }
+  body > div p {
+    font-size: clamp(1.2rem, 1.7vmin, 1.5rem);
+    line-height: 1.5;
+  }
+}
 .introContainer {
   display: flex;
   flex-direction: column;
@@ -343,9 +353,19 @@ body p {
   background-color: #ffffff;
 }
 .introContainer img {
-  width: 200px;
+  width: clamp(200px, 50vmin, 400px);
 }
 
+@media only screen and (min-width: 1600px) {
+  .introContainer {
+    flex-direction: row;
+  }
+  .introContainer img {
+    padding-left: 5%;
+    align-self: start;
+    width: 600px;
+  }
+}
 .introContainer section {
   width: 80%;
 }
@@ -358,6 +378,12 @@ body p {
   padding: 1rem 0;
 }
 
+@media only screen and (min-width: 1200px) {
+  .introContainer section {
+    width: 60%;
+    padding-right: 5%;
+  }
+}
 .allCards {
   width: 90%;
   margin: 0 auto;
