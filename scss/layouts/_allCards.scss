@@ -3,7 +3,7 @@
 .allCards {
 
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto clamp(25px, 10vmin, 50px);
 
     & > div {
         margin: clamp(25px, 10vmin, 50px) 0;
@@ -11,4 +11,45 @@
         background-color: $color-white;
     }
 
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .allCards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5vmax;
+        
+        & > div {
+            position: relative;
+            margin: 0;
+            flex-grow: 1;
+            width: 40%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .allCards {
+
+        gap: 3vmax;
+        
+        & > div {
+            width: 25%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+
+    .allCards {
+
+        gap: 2vmax;
+        
+        & > div {
+            width: 20%;
+        }
+    }
 }

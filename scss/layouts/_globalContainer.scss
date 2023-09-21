@@ -11,7 +11,7 @@ body {
     background-color: $color-grey-4;
 
     p {
-        font-size: clamp(1.3rem, 4vmin, 1.7rem);
+        font-size: clamp(1rem, 2.5vmin, 1.3rem);
         line-height: 1.5;
     }
 }
@@ -19,11 +19,27 @@ body {
 @media only screen and (min-width: 1200px) {
 
     body > div {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
         p {
-            font-size: clamp(1.2rem, 1.7vmin, 1.5rem);
+            font-size: clamp(1rem, 1.5vmin, 1.3rem);
             line-height: 1.5;
         }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    body > div {
+        width: 90%;
+
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+
+    body > div {
+        width: 95%;
+
     }
 }

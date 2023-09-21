@@ -329,18 +329,28 @@ body {
   background-color: #ebebeb;
 }
 body p {
-  font-size: clamp(1.3rem, 4vmin, 1.7rem);
+  font-size: clamp(1rem, 2.5vmin, 1.3rem);
   line-height: 1.5;
 }
 
 @media only screen and (min-width: 1200px) {
   body > div {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
   }
   body > div p {
-    font-size: clamp(1.2rem, 1.7vmin, 1.5rem);
+    font-size: clamp(1rem, 1.5vmin, 1.3rem);
     line-height: 1.5;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  body > div {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  body > div {
+    width: 95%;
   }
 }
 .introContainer {
@@ -376,17 +386,21 @@ body p {
 }
 .introContainer section p {
   padding: 1rem 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1200px) {
   .introContainer section {
-    width: 60%;
+    width: 70%;
     padding-right: 5%;
+  }
+  .introContainer section p {
+    text-align: left;
   }
 }
 .allCards {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto clamp(25px, 10vmin, 50px);
 }
 .allCards > div {
   margin: clamp(25px, 10vmin, 50px) 0;
@@ -394,10 +408,49 @@ body p {
   background-color: #ffffff;
 }
 
+@media only screen and (min-width: 1200px) {
+  .allCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vmax;
+  }
+  .allCards > div {
+    position: relative;
+    margin: 0;
+    flex-grow: 1;
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .allCards {
+    gap: 3vmax;
+  }
+  .allCards > div {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .allCards {
+    gap: 2vmax;
+  }
+  .allCards > div {
+    width: 20%;
+  }
+}
 .allCards img {
   width: 100%;
 }
 
+@media only screen and (min-width: 1200px) {
+  .allCards img {
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .allCards img {
+    height: 200px;
+  }
+}
 .allCards article {
   width: 80%;
   margin: 0 auto;
@@ -409,10 +462,10 @@ body p {
   padding-top: 1rem;
 }
 .allCards article div:nth-of-type(1) p {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   padding: 10px 20px;
   border-radius: 5px;
-  width: 50vmin;
+  width: 40vmin;
   min-width: 120px;
   max-width: 250px;
   text-align: center;
@@ -428,18 +481,19 @@ body p {
 }
 .allCards article div:nth-of-type(2) h2 {
   font-family: "Dancing Script", cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   padding-bottom: 1rem;
 }
 .allCards article div:nth-of-type(2) h3 {
-  font-size: 1.7rem;
-  font-weight: 200;
+  font-size: 1.5rem;
   color: #848a91;
   font-weight: 400;
 }
-.allCards article p {
+.allCards article > p {
   padding-bottom: 40px;
-  border-bottom: 1px solid #adb5bd;
+}
+.allCards article .container-link {
+  border-top: 1px solid #adb5bd;
 }
 .allCards article a > div {
   margin: 20px 0;
@@ -451,4 +505,60 @@ body p {
   -webkit-mask-size: cover;
           mask-size: cover;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+  .allCards article div:nth-of-type(1) {
+    padding-top: 0.3rem;
+  }
+  .allCards article div:nth-of-type(1) p {
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    width: 45%;
+  }
+  .allCards article div:nth-of-type(2) {
+    padding: 30px 0;
+  }
+  .allCards article div:nth-of-type(2) h2 {
+    font-size: 2.3rem;
+    padding-bottom: 0.5rem;
+  }
+  .allCards article div:nth-of-type(2) h3 {
+    font-size: 1rem;
+  }
+  .allCards article > p {
+    font-size: clamp(1rem, 1.5vmin, 1.3rem);
+    margin-bottom: 40px;
+  }
+  .allCards article .container-link {
+    position: absolute;
+    width: 80%;
+    border-top: 1px solid #adb5bd;
+    bottom: 0px;
+  }
+  .allCards article a > div {
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .allCards article div:nth-of-type(1) p {
+    font-size: 0.8rem;
+  }
+  .allCards article div:nth-of-type(2) {
+    padding: 20px 0;
+  }
+  .allCards article div:nth-of-type(2) h2 {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .allCards article div:nth-of-type(2) h3 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .allCards article div:nth-of-type(1) p {
+    font-size: 0.7rem;
+  }
+  .allCards article div:nth-of-type(2) {
+    padding: 20px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

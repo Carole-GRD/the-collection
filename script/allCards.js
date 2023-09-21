@@ -15,7 +15,6 @@ for (let i = 0; i < collectionOfButterflies.length; i++) {
     
     // image
     let imageTag = document.createElement('img');
-    // imageTag.setAttribute('src', papillon.image);
     imageTag.setAttribute('src', collectionOfButterflies[i].image);
 
     // ARTICLE CONTAINER
@@ -54,12 +53,16 @@ for (let i = 0; i < collectionOfButterflies.length; i++) {
     let description = document.createTextNode(collectionOfButterflies[i].description)
     descriptionTag.appendChild(description);
 
+
     // ARTICLE : external link
+    let borderTag = document.createElement('div');
+    borderTag.className = 'container-link';
     let externalLinkTag = document.createElement('a');
     externalLinkTag.setAttribute('href', collectionOfButterflies[i].externalLink);
     externalLinkTag.setAttribute('target', '_blank');
     let divTag = document.createElement('div');
     externalLinkTag.appendChild(divTag);
+    borderTag.appendChild(externalLinkTag);
     // let imgTag = document.createElement('img');
     // imgTag.setAttribute('src', '../image/youtube.png');
     // let imgTag = document.createElement('ion-icon');
@@ -72,7 +75,8 @@ for (let i = 0; i < collectionOfButterflies.length; i++) {
     articleTag.appendChild(colorAndRegionContainerTag);
     articleTag.appendChild(nameContainerTag);
     articleTag.appendChild(descriptionTag);
-    articleTag.appendChild(externalLinkTag);
+    // articleTag.appendChild(externalLinkTag);
+    articleTag.appendChild(borderTag);
 
     // -----------------------------------
     // Add to card
