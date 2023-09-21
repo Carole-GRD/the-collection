@@ -500,8 +500,8 @@ body p {
   width: 70px;
   aspect-ratio: 1/1;
   background-color: #adb5bd;
-  -webkit-mask-image: url(../../image/youtube.png);
-          mask-image: url(../../image/youtube.png);
+  -webkit-mask-image: url(/image/youtube.png);
+          mask-image: url(/image/youtube.png);
   -webkit-mask-size: cover;
           mask-size: cover;
   cursor: pointer;
