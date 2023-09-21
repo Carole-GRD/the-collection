@@ -6,12 +6,13 @@
 
 // Global container for introduction
 let introContainerTag = document.createElement('div');
+introContainerTag.className = "introContainer";
 
 
 // Image for introduction
 let introImgTag = document.createElement('img');
 introImgTag.setAttribute('src', IntroData.logo)
-introImgTag.style.height = '200px';
+
 // Text for introduction
 let introContentTag = document.createElement('section');
 

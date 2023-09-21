@@ -1,0 +1,17 @@
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-paragraphs;
+
+    background-color: $color-grey-4;
+
+    p {
+        font-size: clamp(1.3rem, 4vmin ,1.7rem);
+        line-height: 1.5;
+    }
+}

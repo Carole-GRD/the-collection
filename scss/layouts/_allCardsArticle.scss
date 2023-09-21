@@ -1,0 +1,66 @@
+
+// part of the map located between the image and the Youtube button
+.allCards article {
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0 1rem;
+
+    // region and colors
+    div:nth-of-type(1) {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+
+        p {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            padding: 10px 20px; 
+            border-radius: 5px;
+            width: 50vmin;
+            min-width: 120px;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        p:first-of-type {
+            background-color: $color-yellow;
+        }
+        p:last-of-type {
+            background-color: $color-blue;
+        }
+
+    }
+
+    // commonName and scientificName
+    div:nth-of-type(2) {
+        padding: 50px 0;
+        
+        h2 {
+            font-family: $font-family-heading;
+            font-size: 4rem;
+            padding-bottom: 1rem;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            font-weight: 200;
+        }
+    }
+
+    p {
+        padding-bottom: 40px;
+        border-bottom: 1px solid $color-grey-1;
+    }
+
+
+    // link Youtube
+    a > div {
+        margin: 20px 0;
+        width: 70px;
+        aspect-ratio: 1/1;
+        background-color: $color-grey-1;
+        mask-image: url(../../image/youtube.png);
+        mask-size: cover;
+        cursor: pointer;
+    }
+}

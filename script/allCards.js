@@ -6,6 +6,7 @@
 
 // grid container for arranging all cards
 let gridContainerTag = document.createElement('div'); 
+gridContainerTag.className = 'allCards';
 
 // for (let papillon of collectionOfButterflies) {
 for (let i = 0; i < collectionOfButterflies.length; i++) {
@@ -20,45 +21,27 @@ for (let i = 0; i < collectionOfButterflies.length; i++) {
     // ARTICLE CONTAINER
     let articleTag = document.createElement('article');
 
-    // ARTICLE : region + color
+    // ARTICLE : region + colors
     let colorAndRegionContainerTag = document.createElement('div');
-    
+    // region
+    let distributionRegionTag = document.createElement('p');
+    let distributionRegion = document.createTextNode(collectionOfButterflies[i].distributionRegion)
+    distributionRegionTag.appendChild(distributionRegion);
+    // colors
     let colorTag = document.createElement('p');
-    // let colorDisplay = '';
-    // for (let j = 0; j < collectionOfButterflies[i].colors.length; j++) {
-    //     if (collectionOfButterflies[i].colors.length === 1) {
-    //         colorDisplay = collectionOfButterflies[i].colors[j];
-    //     }
-    //     else if (i < (collectionOfButterflies[i].colors.length - 1)  ) {
-    //         if (i !== 0) {
-    //             colorDisplay += collectionOfButterflies[i].colors[j] + ' - ';
-    //         }
-    //         else {
-    //             colorDisplay += collectionOfButterflies[i].colors[j] + ' - ';
-    //         }
-    //     }
-    //     else {
-    //         colorDisplay += collectionOfButterflies[i].colors[j];
-    //     }
-    // }
-    // let color = document.createTextNode(colorDisplay);
     let color = document.createTextNode(colorArr[i]);
     colorTag.appendChild(color);
 
-    let distributionRegionTag = document.createElement('p');
-    let distributionRegion = document.createTextNode('Région : ' + collectionOfButterflies[i].distributionRegion)
-    distributionRegionTag.appendChild(distributionRegion);
-
-    colorAndRegionContainerTag.appendChild(colorTag);
     colorAndRegionContainerTag.appendChild(distributionRegionTag);
+    colorAndRegionContainerTag.appendChild(colorTag);
 
     // ARTICLE : commonName + scientificName
     let nameContainerTag = document.createElement('div');
-
+    // commonName
     let commonNameTag = document.createElement('h2');
     let commonName = document.createTextNode(collectionOfButterflies[i].commonName)
     commonNameTag.appendChild(commonName);
-
+    // scientificName
     let scientificNameTag = document.createElement('h3');
     let scientificName = document.createTextNode(collectionOfButterflies[i].scientificName)
     scientificNameTag.appendChild(scientificName);
@@ -66,7 +49,6 @@ for (let i = 0; i < collectionOfButterflies.length; i++) {
     nameContainerTag.appendChild(commonNameTag);
     nameContainerTag.appendChild(scientificNameTag);
 
-    
     // ARTICLE : description
     let descriptionTag = document.createElement('p');
     let description = document.createTextNode(collectionOfButterflies[i].description)
@@ -75,21 +57,28 @@ for (let i = 0; i < collectionOfButterflies.length; i++) {
     // ARTICLE : external link
     let externalLinkTag = document.createElement('a');
     externalLinkTag.setAttribute('href', collectionOfButterflies[i].externalLink);
-    let imgLink = document.createElement('img');
-    imgLink.setAttribute('src', '../image/youtube.png');
-    externalLinkTag.appendChild(imgLink);
+    externalLinkTag.setAttribute('target', '_blank');
+    let divTag = document.createElement('div');
+    externalLinkTag.appendChild(divTag);
+    // let imgTag = document.createElement('img');
+    // imgTag.setAttribute('src', '../image/youtube.png');
+    // let imgTag = document.createElement('ion-icon');
+    // imgTag.setAttribute('name', 'logo-youtube');
+    // externalLinkTag.appendChild(imgTag);
+    // externalLinkTag.appendChild(divTag);
 
     // -----------------------------------
     // Add to article
     articleTag.appendChild(colorAndRegionContainerTag);
     articleTag.appendChild(nameContainerTag);
     articleTag.appendChild(descriptionTag);
+    articleTag.appendChild(externalLinkTag);
 
     // -----------------------------------
     // Add to card
     cardTag.appendChild(imageTag);
     cardTag.appendChild(articleTag);
-    cardTag.appendChild(externalLinkTag);
+    // cardTag.appendChild(divTag);
     
     
     // -----------------------------------

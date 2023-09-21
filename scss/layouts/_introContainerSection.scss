@@ -1,0 +1,17 @@
+
+
+.introContainer section {
+
+    width: 80%;
+
+    h1 {
+        font-family: $font-family-heading;
+        font-size: clamp(3rem, 8vmin, 6rem);
+        text-align: center;
+    }
+
+    p {
+        padding: 1rem 0;
+    }
+
+}
